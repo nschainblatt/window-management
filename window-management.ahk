@@ -8,7 +8,6 @@
     {
         WinActivate
         WinWaitActive
-        Send, {LWin down}{Up down}{LWin up}{Up up} ; Maximizes the window
     }
     else
     {
@@ -37,4 +36,12 @@ return
 
 ; Toggle IntelliJ IDEA
 ^!i::ToggleApp("C:\ProgramData\Microsoft\Windows\Start Menu\Programs\JetBrains\IntelliJ IDEA 2023.2.5.lnk", "ahk_class SunAwtFrame", "IntelliJ IDEA")
+return
+
+^!m:: ; This is the hotkey definition for Ctrl (^) + Alt (!) + M (m)
+    WinMaximize, A ; Maximizes the currently active window (denoted by 'A')
+return
+
+^!n:: ; This is the hotkey definition for Ctrl (^) + Alt (!) + N (n)
+    WinRestore, A ; Restores the currently active window to its normal state
 return
